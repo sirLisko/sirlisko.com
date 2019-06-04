@@ -17,13 +17,18 @@ beforeEach(() => {
 });
 
 describe("Resume Page", () => {
-  let wrapper;
-
-  beforeEach(() => {
-    wrapper = renderer.create(<Resume />).toJSON();
+  it("should render properly", () => {
+    const wrapper = renderer.create(<Resume />);
+    expect(wrapper.toJSON()).toMatchSnapshot();
   });
 
-  it("should render properly", () => {
-    expect(wrapper).toMatchSnapshot();
+  it("should render properly (alt version)", () => {
+    Object.defineProperty(window, "location", {
+      value: {
+        search: "?alt"
+      }
+    });
+    const wrapper = renderer.create(<Resume />);
+    expect(wrapper.toJSON()).toMatchSnapshot();
   });
 });
