@@ -3,11 +3,9 @@ import { Link } from "gatsby";
 
 import "./index.scss";
 
-import me from "../../data/me.json";
-
 import SEO from "../components/Seo.jsx";
-import Links from "../components/Links.jsx";
-import Greeting from "../components/Greeting.jsx";
+import Links from "../components/Links/Links.jsx";
+import Greeting from "../components/Greetings/Greeting.jsx";
 import Ghost from "../components/Ghost.jsx";
 
 const HomePage = () => (
@@ -25,17 +23,10 @@ const HomePage = () => (
     />
     {typeof window !== `undefined` && !window.ontouchstart && <Ghost />}
     <header>
-      <Links links={me.links} />
+      <Links />
     </header>
     <article>
-      <section className="greeting">
-        <img
-          className="greeting__face"
-          src="./images/sirlisko.svg"
-          alt="sirlisko face"
-        />
-        <Greeting descriptions={me.descriptions} />
-      </section>
+      <Greeting />
     </article>
     <footer>
       <Link className="my__projects" to="/projects">

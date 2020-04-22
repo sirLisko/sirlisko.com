@@ -1,7 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { StaticQuery, graphql } from "gatsby";
+
 import "./Links.scss";
+
+const query = graphql`
+  query Links {
+    dataJson {
+      links {
+        name
+        url
+      }
+    }
+  }
+`;
 
 const Links = ({ links }) => (
   <ul className="links">
@@ -19,4 +32,11 @@ Links.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape().isRequired).isRequired,
 };
 
-export default Links;
+const LinksWithStaticQuery = (props) => (
+  <StaticQuery
+    query={query}
+    render={({ dataJson }) => Links({ ...dataJson, ...props })}
+  />
+);
+
+export default LinksWithStaticQuery;

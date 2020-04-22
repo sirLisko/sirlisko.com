@@ -92,7 +92,7 @@
       ]
     }
   ],
-  "projects": [
+  "featuredProjects": [
     {
       "name": "Been",
       "url": "https://been.netlify.com/",
