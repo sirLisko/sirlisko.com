@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { StaticQuery } from "gatsby";
 
-import Page404 from "../404.jsx";
+import Page404 from "../404";
 
 beforeEach(() => {
   StaticQuery.mockImplementationOnce(({ render }) =>

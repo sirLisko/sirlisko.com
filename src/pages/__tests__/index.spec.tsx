@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { StaticQuery } from "gatsby";
 
-import Index from "../index.jsx";
+import Index from "../index";
 
 jest.mock("../../../data/me.json", () => ({
   descriptions: ["foo", "bar"],

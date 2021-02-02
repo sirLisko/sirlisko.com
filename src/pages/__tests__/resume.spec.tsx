@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { StaticQuery } from "gatsby";
 
-import Resume from "../resume.jsx";
+import Resume from "../resume";
 
 jest.mock("../../../data/resume.json", () => ({
   skills: {

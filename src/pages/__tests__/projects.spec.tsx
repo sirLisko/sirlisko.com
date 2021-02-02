@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { StaticQuery } from "gatsby";
 
-import Projects from "../projects.jsx";
+import Projects from "../projects";
 
 jest.mock("../../../data/projects.json", () => [
   {
