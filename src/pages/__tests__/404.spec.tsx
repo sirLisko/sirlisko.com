@@ -4,8 +4,10 @@ import { StaticQuery } from "gatsby";
 
 import Page404 from "../404";
 
+const mockedStaticQuery = StaticQuery as jest.Mock;
+
 beforeEach(() => {
-  StaticQuery.mockImplementationOnce(({ render }) =>
+  mockedStaticQuery.mockImplementationOnce(({ render }) =>
     render({
       site: {
         siteMetadata: {

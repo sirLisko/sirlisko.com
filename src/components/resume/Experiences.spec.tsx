@@ -7,7 +7,7 @@ describe("Experiences Component", () => {
   const props = {
     experiences: [
       {
-        role: "foo",
+        where: "foo",
         blurp: ["..."],
       },
       {

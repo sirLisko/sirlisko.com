@@ -27,8 +27,10 @@ jest.mock("../../../data/projects.json", () => [
   },
 ]);
 
+const mockedStaticQuery = StaticQuery as jest.Mock;
+
 beforeEach(() => {
-  StaticQuery.mockImplementationOnce(({ render }) =>
+  mockedStaticQuery.mockImplementationOnce(({ render }) =>
     render({
       site: {
         siteMetadata: {
