@@ -5,23 +5,25 @@ exports[`Index Page should render properly 1`] = `
   <div
     class="home"
   >
-    <section
-      class="life"
-    >
-      <span
-        class="life__heart"
+    <div>
+      <section
+        class="life"
+      >
+        <span
+          class="life__heart"
+        />
+        <span
+          class="life__heart"
+        />
+        <span
+          class="life__heart"
+        />
+      </section>
+      <figure
+        class="ghost"
+        style="left: -200px; top: -300px;"
       />
-      <span
-        class="life__heart"
-      />
-      <span
-        class="life__heart"
-      />
-    </section>
-    <figure
-      class="ghost"
-      style="left: -200px; top: -300px;"
-    />
+    </div>
     <header>
       <ul
         class="links"
@@ -31,6 +33,7 @@ exports[`Index Page should render properly 1`] = `
         >
           <a
             href="https://foo"
+            title="foo"
           >
             <p
               class="caption"
@@ -44,6 +47,7 @@ exports[`Index Page should render properly 1`] = `
         >
           <a
             href="https://Bar"
+            title="bar"
           >
             <p
               class="caption"
