@@ -5,25 +5,23 @@ exports[`Index Page should render properly 1`] = `
   <div
     class="home"
   >
-    <div>
-      <section
-        class="life"
-      >
-        <span
-          class="life__heart"
-        />
-        <span
-          class="life__heart"
-        />
-        <span
-          class="life__heart"
-        />
-      </section>
-      <figure
-        class="ghost"
-        style="left: -200px; top: -300px;"
+    <section
+      class="life"
+    >
+      <span
+        class="life__heart"
       />
-    </div>
+      <span
+        class="life__heart"
+      />
+      <span
+        class="life__heart"
+      />
+    </section>
+    <figure
+      class="ghost"
+      style="left: -200px; top: -300px;"
+    />
     <header>
       <ul
         class="links"
