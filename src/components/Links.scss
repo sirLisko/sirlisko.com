@@ -1,6 +1,7 @@
 .links {
   margin: 0;
   padding: 0;
+  position: relative;
   & li {
     display: inline-block;
     margin-right: 0.5rem;
@@ -32,6 +33,8 @@
   position: absolute;
   top: 50px;
   transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
 }
 
 .links--blog a {
