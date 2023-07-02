@@ -44,7 +44,7 @@ const ResumePage = () => {
 
 export const Head = () => (
   <SEO
-    title="Resume"
+    pageTitle="Resume"
     description="Resume (or CV) of Luca Lischetti also know as sirLisko. Experiences, skills and interests."
     keywords={[
       "Luca Lischetti",

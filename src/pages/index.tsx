@@ -38,6 +38,6 @@ const HomePage = () => (
   </div>
 );
 
-export const Head = () => <SEO title="Home" keywords={me.keywords} />;
+export const Head = () => <SEO pageTitle="Home" keywords={me.keywords} />;
 
 export default HomePage;

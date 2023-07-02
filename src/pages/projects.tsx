@@ -31,7 +31,7 @@ const ProjectsPage = () => (
 
 export const Head = () => (
   <SEO
-    title="Projects"
+    pageTitle="Projects"
     description="What I am working on at the moment.. Give a look at my side projects."
     keywords={[
       "Luca Lischetti",

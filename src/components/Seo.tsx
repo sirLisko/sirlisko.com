@@ -14,8 +14,8 @@ const detailsQuery = graphql`
 `;
 
 interface SEOProps {
-  title: string;
-  keywords: string[];
+  pageTitle: string;
+  keywords?: string[];
   description?: string;
   lang?: string;
   image?: string;
@@ -25,19 +25,18 @@ const SEO = ({
   description,
   lang = "en",
   keywords,
-  title,
+  pageTitle,
   image,
 }: SEOProps) => {
   const data = useStaticQuery(detailsQuery);
   const metaDescription = description || data.site.siteMetadata.description;
+  const formattedTitle = `${pageTitle} | ${data.site.siteMetadata.title}`;
   return (
     <>
       <html lang={lang} />
-      <title>
-        {title} | {data.site.siteMetadata.title}
-      </title>
+      <title>{formattedTitle}</title>
       <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={pageTitle} />
       <meta
         property="og:image"
         content={image || data.site.siteMetadata.image}
@@ -46,9 +45,9 @@ const SEO = ({
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={data.site.siteMetadata.author} />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={metaDescription} />
-      {keywords.length > 0 ? (
+      {keywords && keywords.length > 0 ? (
         <meta name="keywords" content={keywords.join(`, `)} />
       ) : null}
       <link
@@ -58,12 +57,6 @@ const SEO = ({
       />
     </>
   );
-};
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
 };
 
 export default SEO;
