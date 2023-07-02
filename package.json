@@ -26,8 +26,7 @@
     "coverage": "jest --coverage",
     "lint": "eslint src --ext=ts,tsx",
     "type-check": "tsc",
-    "unit": "jest",
-    "test": "npm run lint && npm run type-check && npm run unit"
+    "test": "jest"
   },
   "dependencies": {
     "classnames": "^2.3.2",
