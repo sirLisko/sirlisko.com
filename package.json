@@ -1,6 +1,6 @@
 {
   "name": "sirlisko.com",
-  "version": "0.1.0",
+  "private": "true",
   "description": "Personal Website of Luca Lischetti",
   "repository": {
     "type": "git",
