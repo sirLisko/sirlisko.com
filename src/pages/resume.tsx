@@ -3,9 +3,6 @@ import React from "react";
 import classNames from "classnames";
 import resume from "../../data/resume";
 
-import "../styles/style.scss";
-import "../styles/resume.scss";
-
 import SEO from "../components/Seo";
 import Me from "../components/resume/Me";
 import Skills from "../components/resume/Skills";

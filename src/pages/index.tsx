@@ -1,8 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
-
-import "../styles/style.scss";
-import "../styles/index.scss";
+import Link from "next/link";
 
 import me from "../../data/me";
 
@@ -18,20 +15,13 @@ const HomePage = () => (
       <Links links={me.links} />
     </header>
     <article>
-      <section className="greeting">
-        <img
-          className="greeting__face"
-          src="./images/sirlisko.svg"
-          alt="sirlisko face"
-        />
-        <Greeting descriptions={me.descriptions} />
-      </section>
+      <Greeting descriptions={me.descriptions} />
     </article>
     <footer>
-      <Link className="my__projects" to="/projects">
+      <Link className="my__projects" href="/projects">
         Projects
       </Link>
-      <Link className="my__resume" to="/resume">
+      <Link className="my__resume" href="/resume">
         Resume
       </Link>
     </footer>

@@ -1,17 +1,12 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
-  }
-`;
+const data = {
+  title: `sirLisko... Luca Lischetti`,
+  description: `personal (and experimental) website of Luca Lischetti aka sirLisko or just another f@$#&amp;n' web developer, full time dreamer and sometimes sleeper, true 8-bit lover and sunday super hero..`,
+  author: `Luca Lischetti`,
+  image: `https://sirlisko.com/images/lisko.png`,
+  siteUrl: `https://sirlisko.com`,
+};
 
 interface SEOProps {
   pageTitle: string;
@@ -28,23 +23,19 @@ const SEO = ({
   pageTitle,
   image,
 }: SEOProps) => {
-  const data = useStaticQuery(detailsQuery);
-  const metaDescription = description || data.site.siteMetadata.description;
-  const formattedTitle = `${pageTitle} | ${data.site.siteMetadata.title}`;
+  const metaDescription = description || data.description;
+  const formattedTitle = `${pageTitle} | ${data.title}`;
   return (
     <>
       <html lang={lang} />
       <title>{formattedTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={pageTitle} />
-      <meta
-        property="og:image"
-        content={image || data.site.siteMetadata.image}
-      />
+      <meta property="og:image" content={image || data.image} />
       <meta property="og:description" content="metaDescription" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={data.site.siteMetadata.author} />
+      <meta name="twitter:creator" content={data.author} />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={metaDescription} />
       {keywords && keywords.length > 0 ? (

@@ -9,13 +9,13 @@ exports[`Index Page should render properly 1`] = `
       class="life"
     >
       <span
-        class="life__heart"
+        class="heart"
       />
       <span
-        class="life__heart"
+        class="heart"
       />
       <span
-        class="life__heart"
+        class="heart"
       />
     </section>
     <figure
@@ -25,9 +25,10 @@ exports[`Index Page should render properly 1`] = `
     <header>
       <ul
         class="links"
+        role="navigation"
       >
         <li
-          class="links--foo"
+          class="foo"
         >
           <a
             href="https://foo"
@@ -41,7 +42,7 @@ exports[`Index Page should render properly 1`] = `
           </a>
         </li>
         <li
-          class="links--bar"
+          class="bar"
         >
           <a
             href="https://Bar"
@@ -57,16 +58,16 @@ exports[`Index Page should render properly 1`] = `
       </ul>
     </header>
     <article>
-      <section
-        class="greeting"
+      <div
+        class="container"
       >
         <img
           alt="sirlisko face"
-          class="greeting__face"
+          class="face"
           src="./images/sirlisko.svg"
         />
         <div
-          class="greeting__intro"
+          class="intro"
         >
           <p>
             Ciao!
@@ -78,21 +79,19 @@ exports[`Index Page should render properly 1`] = `
             another f@$#&n’
           </p>
           <p
-            class="greeting__intro__desc"
+            class="desc"
           >
             <span
-              class="greeting__intro--active"
+              class="descActive"
             >
               foo
             </span>
-            <span
-              class=""
-            >
+            <span>
               bar
             </span>
           </p>
         </div>
-      </section>
+      </div>
     </article>
     <footer>
       <a

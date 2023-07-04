@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Me } from "../types";
 
-import "./Greeting.scss";
+import styles from "./Greeting.module.scss";
 
 interface GreetingProps {
   descriptions: Me["descriptions"];
@@ -22,22 +22,29 @@ const Greeting = ({ descriptions }: GreetingProps) => {
   }, []);
 
   return (
-    <div className="greeting__intro">
-      <p>Ciao!</p>
-      <p>I’m sirLisko,</p>
-      <p>another f@$#&amp;n’</p>
-      <p className="greeting__intro__desc">
-        {descriptions.map((d) => (
-          <span
-            key={d}
-            className={
-              d === selectedDescription ? "greeting__intro--active" : ""
-            }
-          >
-            {d}
-          </span>
-        ))}
-      </p>
+    <div className={styles.container}>
+      <img
+        className={styles.face}
+        src="./images/sirlisko.svg"
+        alt="sirlisko face"
+      />
+      <div className={styles.intro}>
+        <p>Ciao!</p>
+        <p>I’m sirLisko,</p>
+        <p>another f@$#&amp;n’</p>
+        <p className={styles.desc}>
+          {descriptions.map((d) => (
+            <span
+              key={d}
+              className={
+                d === selectedDescription ? styles.descActive : undefined
+              }
+            >
+              {d}
+            </span>
+          ))}
+        </p>
+      </div>
     </div>
   );
 };

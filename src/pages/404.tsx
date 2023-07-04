@@ -2,8 +2,6 @@ import React from "react";
 
 import SEO from "../components/Seo";
 
-import "../styles/style.scss";
-
 const NotFoundPage = () => (
   <>
     <h1>NOT FOUND</h1>

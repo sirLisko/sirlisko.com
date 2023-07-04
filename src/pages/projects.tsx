@@ -1,10 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "next/link";
 
 import projects from "../../data/projects";
-
-import "../styles/style.scss";
-import "../styles/projects.scss";
 
 import SEO from "../components/Seo";
 import ProjectCard from "../components/ProjectCard";
@@ -12,7 +9,7 @@ import ProjectCard from "../components/ProjectCard";
 const ProjectsPage = () => (
   <div className="projects-page">
     <div className="logo">
-      <Link to="/">
+      <Link href="/">
         <img src="/images/sirlisko.svg" alt="sirlisko face" />
       </Link>
     </div>

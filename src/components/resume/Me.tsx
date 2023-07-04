@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "next/link";
 
 const Education = () => (
   <section className="me">
     <div className="me__face">
-      <Link to="/">
+      <Link href="/">
         <img
           src="https://sirlisko.com/images/sirlisko.svg"
           alt="sirlisko face"
