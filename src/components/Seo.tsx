@@ -16,18 +16,11 @@ interface SEOProps {
   image?: string;
 }
 
-const SEO = ({
-  description,
-  lang = "en",
-  keywords,
-  pageTitle,
-  image,
-}: SEOProps) => {
+const SEO = ({ description, keywords, pageTitle, image }: SEOProps) => {
   const metaDescription = description || data.description;
   const formattedTitle = `${pageTitle} | ${data.title}`;
   return (
     <>
-      <html lang={lang} />
       <title>{formattedTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={pageTitle} />

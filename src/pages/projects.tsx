@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 
 import projects from "../../data/projects";
@@ -8,6 +9,20 @@ import ProjectCard from "../components/ProjectCard";
 
 const ProjectsPage = () => (
   <div className="projects-page">
+    <Head>
+      <SEO
+        pageTitle="Projects"
+        description="What I am working on at the moment.. Give a look at my side projects."
+        keywords={[
+          "Luca Lischetti",
+          "sirlisko",
+          "web developer",
+          "software engineer",
+          "projects",
+          "ideas",
+        ]}
+      />
+    </Head>
     <div className="logo">
       <Link href="/">
         <img src="/images/sirlisko.svg" alt="sirlisko face" />
@@ -24,21 +39,6 @@ const ProjectsPage = () => (
       </ul>
     </section>
   </div>
-);
-
-export const Head = () => (
-  <SEO
-    pageTitle="Projects"
-    description="What I am working on at the moment.. Give a look at my side projects."
-    keywords={[
-      "Luca Lischetti",
-      "sirlisko",
-      "web developer",
-      "software engineer",
-      "projects",
-      "ideas",
-    ]}
-  />
 );
 
 export default ProjectsPage;

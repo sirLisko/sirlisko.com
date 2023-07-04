@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 
 import me from "../../data/me";
@@ -10,6 +11,9 @@ import Ghost from "../components/Ghost";
 
 const HomePage = () => (
   <div className="home">
+    <Head>
+      <SEO pageTitle="Home" keywords={me.keywords} />;
+    </Head>
     <Ghost />
     <header>
       <Links links={me.links} />
@@ -27,7 +31,5 @@ const HomePage = () => (
     </footer>
   </div>
 );
-
-export const Head = () => <SEO pageTitle="Home" keywords={me.keywords} />;
 
 export default HomePage;
