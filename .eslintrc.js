@@ -20,4 +20,7 @@ module.exports = {
     es6: true,
     node: true,
   },
+  rules: {
+    "@next/next/no-img-element": "off",
+  },
 };
