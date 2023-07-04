@@ -5,6 +5,7 @@ exports[`Index Page should render properly 1`] = `
   <div
     class="home"
   >
+    ;
     <section
       class="life"
     >
@@ -25,7 +26,6 @@ exports[`Index Page should render properly 1`] = `
     <header>
       <ul
         class="links"
-        role="navigation"
       >
         <li
           class="foo"
@@ -66,8 +66,8 @@ exports[`Index Page should render properly 1`] = `
           class="face"
           data-nimg="1"
           decoding="async"
+          fetchpriority="high"
           height="714"
-          loading="lazy"
           src="./images/sirlisko.svg"
           style="color: transparent;"
           width="496"
