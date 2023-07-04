@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+
 import { Me } from "../types";
 
 import styles from "./Greeting.module.scss";
@@ -23,10 +25,12 @@ const Greeting = ({ descriptions }: GreetingProps) => {
 
   return (
     <div className={styles.container}>
-      <img
+      <Image
         className={styles.face}
         src="./images/sirlisko.svg"
         alt="sirlisko face"
+        height={714}
+        width={496}
       />
       <div className={styles.intro}>
         <p>Ciao!</p>

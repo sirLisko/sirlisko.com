@@ -64,7 +64,13 @@ exports[`Index Page should render properly 1`] = `
         <img
           alt="sirlisko face"
           class="face"
+          data-nimg="1"
+          decoding="async"
+          height="714"
+          loading="lazy"
           src="./images/sirlisko.svg"
+          style="color: transparent;"
+          width="496"
         />
         <div
           class="intro"

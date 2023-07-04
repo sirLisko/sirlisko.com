@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -25,7 +26,12 @@ const ProjectsPage = () => (
     </Head>
     <div className="logo">
       <Link href="/">
-        <img src="/images/sirlisko.svg" alt="sirlisko face" />
+        <Image
+          src="/images/sirlisko.svg"
+          alt="sirlisko face"
+          height={144}
+          width={100}
+        />
       </Link>
     </div>
     <section>
