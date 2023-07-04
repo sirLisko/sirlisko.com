@@ -9,7 +9,7 @@ interface LinksProps {
 }
 
 const Links = ({ links }: LinksProps) => (
-  <ul className={styles.links} role="navigation">
+  <ul className={styles.links}>
     {links.map((link) => (
       <li key={link.name} className={styles[link.name]}>
         <a href={link.url} title={link.name}>

@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 
 import classNames from "classnames";
 import resume from "../../data/resume";
@@ -20,20 +19,18 @@ const ResumePage = () => {
     window.location.search.indexOf("alt") !== -1;
   return (
     <div className={classNames("resume", isAltVersion && "alt")}>
-      <Head>
-        <SEO
-          pageTitle="Resume"
-          description="Resume (or CV) of Luca Lischetti also know as sirLisko. Experiences, skills and interests."
-          keywords={[
-            "Luca Lischetti",
-            "sirlisko",
-            "web developer",
-            "software engineer",
-            "resume",
-            "cv",
-          ]}
-        />
-      </Head>
+      <SEO
+        pageTitle="Resume"
+        description="Resume (or CV) of Luca Lischetti also know as sirLisko. Experiences, skills and interests."
+        keywords={[
+          "Luca Lischetti",
+          "sirlisko",
+          "web developer",
+          "software engineer",
+          "resume",
+          "cv",
+        ]}
+      />
       <Me />
       <div className="wrapper">
         <Skills skills={resume.skills} />

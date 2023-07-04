@@ -31,6 +31,7 @@ const Greeting = ({ descriptions }: GreetingProps) => {
         alt="sirlisko face"
         height={714}
         width={496}
+        priority
       />
       <div className={styles.intro}>
         <p>Ciao!</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 const data = {
   title: `sirLisko... Luca Lischetti`,
@@ -20,7 +21,7 @@ const SEO = ({ description, keywords, pageTitle, image }: SEOProps) => {
   const metaDescription = description || data.description;
   const formattedTitle = `${pageTitle} | ${data.title}`;
   return (
-    <>
+    <Head>
       <title>{formattedTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={pageTitle} />
@@ -39,7 +40,7 @@ const SEO = ({ description, keywords, pageTitle, image }: SEOProps) => {
         rel="author"
         href="https://sirlisko.com/humans.txt"
       />
-    </>
+    </Head>
   );
 };
 
