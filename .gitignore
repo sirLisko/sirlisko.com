@@ -1,12 +1,11 @@
 node_modules/
 coverage/
-out/
+dist/
 .cache/
 .vscode/
 
 # generated types
 .astro/
-
 
 # logs
 pnpm-debug.log*
