@@ -1,6 +1,6 @@
 [build]
 command = "astro build"
-publish = "out"
+publish = "dist"
 
 [[redirects]]
 from = "/blog/*"
