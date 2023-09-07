@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.0.1",
+    "@fontsource/press-start-2p": "^5.0.11",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "astro": "^3.0.10",
