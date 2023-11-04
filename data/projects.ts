@@ -1,10 +1,10 @@
 import type { Project } from "../src/types";
 
-import { GiWorld } from "react-icons/gi";
-import { GrMap } from "react-icons/gr";
-import { TbBrandRedux } from "react-icons/tb";
-import { MdFlight } from "react-icons/md";
-import { BsFillCalendarHeartFill } from "react-icons/bs";
+import Calendar from "../src/components/Icons/Calendar";
+import Flight from "../src/components/Icons/Flight";
+import PinMap from "../src/components/Icons/PinMap";
+import Redux from "../src/components/Icons/Redux";
+import WorldMap from "../src/components/Icons/WorldMap";
 
 export const projects: Project[] = [
   {
@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "Web companion to keep track of where you have BEEN, listing your visited countries.",
       "React application powered by Firebase Auth and Firestore.",
     ],
-    icon: MdFlight,
+    icon: Flight,
     links: {
       Website: "https://been.netlify.app/",
       Github: "https://github.com/sirLisko/been",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "BYO World map country SVG shapes.",
       "NPM module that provides a JSON with all the countries shapes.",
     ],
-    icon: GiWorld,
+    icon: WorldMap,
     links: {
       "NPM Module": "https://npmjs.com/package/world-map-country-shapes",
       Github: "https://github.com/sirLisko/world-map-country-shapes",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       "redux-persist transformer that resets the persisted redux data after a specific period of time.",
       "NPM module that extendes the functionality of the redux plugin.",
     ],
-    icon: TbBrandRedux,
+    icon: Redux,
     links: {
       "NPM Module":
         "https://npmjs.com/package/redux-persist-transform-expire-in",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
   {
     title: "UK Postcode Validator",
     description: ["Micro NPM module to validate UK postcodes."],
-    icon: GrMap,
+    icon: PinMap,
     links: {
       "NPM Module": "https://npmjs.com/package/uk-postcode-validator",
       Github: "https://github.com/sirLisko/uk-postcode-validator",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       "Your year in gifs.",
       "GifDay is a webapp that allows you to create a gif for every day of the year, using the Giphy API.",
     ],
-    icon: BsFillCalendarHeartFill,
+    icon: Calendar,
     links: {
       Website: "https://gifday.netlify.com/",
       Github: "https://github.com/sirLisko/gifday",
