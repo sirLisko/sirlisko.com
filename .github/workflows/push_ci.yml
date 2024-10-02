@@ -20,7 +20,9 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "pnpm"
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
+        env:
+          CI: true
       - name: Run Lint
         run: pnpm run lint
       - name: Run Typecheck
