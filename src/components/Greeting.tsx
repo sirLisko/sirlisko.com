@@ -15,8 +15,7 @@ const Greeting = ({ descriptions }: GreetingProps) => {
   const pauseTime = 2000;
 
   useEffect(() => {
-    // eslint-disable-next-line no-undef
-    let typingInterval: NodeJS.Timeout;
+    let typingInterval: ReturnType<typeof setTimeout>;
 
     if (!isDeleting && currentDescription.length < selectedDescription.length) {
       typingInterval = setTimeout(() => {
